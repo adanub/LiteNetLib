@@ -228,3 +228,8 @@ ModelManifest.xml
 .idea/
 *.sln.iml
 **/*.vscode
+
+# Curio fork: the LiteNetLib/ folder is consumed as a Unity local package
+# (file: reference) by sibling Unity projects — track its .meta files so
+# asset GUIDs stay stable across machines.
+!LiteNetLib/**/*.meta
