@@ -233,3 +233,5 @@ ModelManifest.xml
 # (file: reference) by sibling Unity projects — track its .meta files so
 # asset GUIDs stay stable across machines.
 !LiteNetLib/**/*.meta
+# dotnet build output (redirected out of the Unity-consumed package folder by Directory.Build.props)
+/build-output/

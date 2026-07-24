@@ -1,0 +1,10 @@
+<Project>
+  <!-- Unity consumes LiteNetLib/ (the inner project folder) directly as a local UPM package and imports
+       every file in it. dotnet builds must therefore never write bin/obj inside that folder: the built
+       dll would be imported alongside the sources and duplicate every type (CS0436 storm in both Unity
+       editors). Route all build output to a repo-root folder Unity never sees. -->
+  <PropertyGroup>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)build-output/$(MSBuildProjectName)/bin/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)build-output/$(MSBuildProjectName)/obj/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>
